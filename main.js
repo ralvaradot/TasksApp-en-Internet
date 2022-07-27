@@ -82,13 +82,12 @@ let editTask = (e) => {
     // selecciono la tarjeta
     let selectedTask = e.parentElement.parentElement;
 
+    console.log(selectedTask);
+
     // lleno los valores
     textInput.value = selectedTask.children[0].innerHTML;
-    // --> <span class="fw-bold">${data.text}</span>
     dateInput.value = selectedTask.children[1].innerHTML;
-    // --> <span class="small text-secondary">${data.date}</span>
     textarea.value = selectedTask.children[2].innerHTML;
-    // --> <p>${data.description}</p>
 
     selectedTask.remove();
 }
